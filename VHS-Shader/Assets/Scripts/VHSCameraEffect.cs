@@ -96,6 +96,11 @@ public class VHSCameraEffect : MonoBehaviour
             isAnimating = false;
             timer = changeInterval; // reset licznika na odstęp między włączeniem się shadera CRT
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
